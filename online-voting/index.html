@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            width: 100%;
+            padding: 50px;
+            background: linear-gradient(135deg, #1c1c1c, #343a40);
+            color: white;
+        }
+
+        .content {
+            flex: 1;
+            padding-left: 5%;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #f8f9fa;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .buttons button {
+            padding: 15px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .admin-btn {
+            background-color: #ff6b6b;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .admin-btn:hover {
+            background-color: #ff4d4d;
+            transform: scale(1.05);
+        }
+
+        .voter-btn {
+            background-color: #4db8ff;
+            color: white;
+            box-shadow: 0 4px 10px rgba(77, 184, 255, 0.3);
+        }
+        .admin-btn {
+            background-color: #e22b2b;
+            color: white;
+            box-shadow: 0 4px 10px rgba(197, 43, 43, 0.3);
+        }
+
+        .voter-btn:hover {
+            background-color: #3399ff;
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            opacity: 0.9;
+            transition: 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .content {
+                padding-left: 0;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .image-container {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Voting: The Heart of Democracy!</h1>
+        <div class="buttons">
+        <form action="register.html">
+            <button class="voter-btn" >Register</button>
+            </form>
+            <form action="login.html">
+            <button class="voter-btn" >Login</button>
+            </form>
+            <form action="admin.html">
+                <button class="admin-btn"  >Admin</button>
+                </form>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2020/10/16044143/M187_Digital-voting-header.png" alt="Voting Image">
+    </div>
+
+</body>
+</html>

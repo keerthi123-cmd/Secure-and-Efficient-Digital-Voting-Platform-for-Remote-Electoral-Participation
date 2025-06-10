@@ -1,0 +1,218 @@
+<html>
+
+<head>
+    <title>Login Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: rgb(214, 214, 223);
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A2A5E;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 20px;
+            
+           
+
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: #0A2A5E;
+            font-weight: bold;
+            padding: 16px;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header .signup-btn {
+            background-color: #0A2A5E;
+            color: #fff;
+            padding: 20px 20px;
+            border-radius: 5px;
+           
+           
+        }
+
+        .header .signup-btn:hover {
+            background-color: #083A8A;
+            text-decoration: none;
+        }
+
+      
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            padding: 40px 0;
+        }
+
+        .content .text {
+            max-width: 50%;
+            padding-right: 50px;
+        }
+
+        .content .text h1 {
+            font-size: 32px;
+            color: #0A2A5E;
+        }
+
+        .content .form {
+            max-width: 30%;
+            background-color: #ffffff;
+            padding: 30px 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-left: 130px;
+        }
+
+        .content .form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .content .form .password-container {
+            position: relative;
+        }
+
+        .content .form .password-container input[type="password"],
+        .content .form .password-container input[type="text"] {
+            width: 100%;
+        }
+
+        .content .form .password-container i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #555;
+        }
+
+        .content .form button {
+            background-color: #0A2A5E;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .content .form button:hover {
+            background-color: #083A8A;
+        }
+
+        .content .form label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .content .form input[type="checkbox"] {
+            width: auto;
+        }
+
+        .content .image {
+            max-width: 80%;
+            object-fit: cover;
+        }
+
+        .content .image img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">VOTE <i class="fas fa-lock"></i></div>
+            
+        </div>
+        <div class="content">
+            <div class="text">
+                <h1>Democracy in Your Hands – Vote <span style="margin-left: 180px;">Online!</span></h1>
+                <div class="image">
+                    <img src="https://img.freepik.com/premium-vector/election-social-poll-concept_1016-3935.jpg?w=1060">
+                </div>
+            </div>
+            <div class="form">
+            
+            
+            <form action="admin_login.php" method="post">
+            
+            <!-- Place for messages: error, alert etc ... -->
+                        
+                        
+                <label for="phone">Enter Admin ID</label>
+                <input type="text" name="username"  >
+                
+                <div class="password-container">
+                    <label for="password">Enter Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Password">
+                    <i style="padding-top:10px"  class="fas fa-eye" id="togglePassword"></i>
+                </div>
+
+                
+                <button type="submit">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            // Toggle the eye icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+
+</html>

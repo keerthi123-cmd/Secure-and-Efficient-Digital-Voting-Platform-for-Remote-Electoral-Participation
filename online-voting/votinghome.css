@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #777;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e6e6e6;
+    border-bottom: 2px solid #ccc;
+}
+
+.title h1 {
+    color: #336699;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-signup{
+    background-color: #3399ff;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+
+
+.auth-buttons .btn-signup:hover, .auth-buttons .btn-signin:hover {
+    background-color: #267db5;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Common styling for the main voting illustration */
+.main-content .im1 img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Adds smooth transition for the hover effect */
+}
+
+/* Hover effect for the voting illustration */
+.main-content .im1 img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    cursor: pointer; /* Changes the cursor to a pointer */
+}
+
+
+.quote-section {
+    max-width: 60%;
+}
+
+.quote-section h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.quote-section p {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.im1 img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+
+.services-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.services-section .service {
+    background-color: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-section .service h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.services-section .service p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Add margin to the top of the first service */
+.services-section .service:first-child {
+    margin-top: 20px;
+}
+
+.im2 img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    object-fit: contain;
+}
+.services-section .service img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Ensures the aspect ratio is maintained */
+    margin-top: 45px; /* Optional: Add some space between the title and image */
+}
+

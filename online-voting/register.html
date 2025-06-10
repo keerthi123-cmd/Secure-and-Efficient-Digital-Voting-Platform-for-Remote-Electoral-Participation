@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Multi-Step Signup Form</title>
+   <style>
+   	/* General Page Styling */
+/* Apply a background image with blur */
+body {
+   background: url('https://img.freepik.com/premium-vector/vote-ballot-box-people-putting-pepper-vote-into-box-election-concept-democracy-freedom-speech-justice-voting-opinion-referendum-poll-choice-event-vector-illustration_98702-1378.jpg?w=1060') no-repeat center center/cover;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Blur effect for the background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://img.freepik.com/premium-vector/vote-ballot-box-people-putting-pepper-vote-into-box-election-concept-democracy-freedom-speech-justice-voting-opinion-referendum-poll-choice-event-vector-illustration_98702-1378.jpg?w=1060') no-repeat center center/cover;
+    background-size: cover;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1;
+}
+
+/* Overlay for better contrast */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Center the form container */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Blur effect inside form container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form heading */
+.heading {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style input fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style submit button */
+.submit-btn {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Error messages */
+.text-danger {
+    font-size: 14px;
+    color: red;
+}
+
+   </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <h1 class="heading">SIGNUP FORM</h1>
+        
+
+
+        <div class="form-container">
+            <form action="register.php" id="signupForm" method="post" enctype="multipart/form-data">
+            
+             <!-- Place for messages: error, alert etc ... -->
+                       
+                       
+                    <input type="text"  name="firstname" placeholder="First Name" required>
+                    
+                        
+                        
+                    <input type="text" = name="lastname" placeholder="Last Name" required>
+                    
+                    
+                    
+                    <input type="email" = name="email" placeholder="Email" required>
+                    
+                    
+                    
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                    
+                    
+
+                    <input type="text" name="aadhar" placeholder="Aadhar Number" required>
+                    
+                    
+                    <input type="text" name="voterId"   placeholder="Voter ID" required>
+                    
+                    
+                    <select  name="state"  id="stateSelect">
+				                        
+				    <option value="">Select State</option>
+				    <option value="'Andhra Pradesh'">Andhra Pradesh</option>
+				    <option value="'Arunachal Pradesh'">Arunachal Pradesh</option>
+				    <option value="Assam">Assam</option>
+				    <option value="Bihar">Bihar</option>
+				    <option value="Chhattisgarh">Chhattisgarh</option>
+				    <option value="Goa">Goa</option>
+				    <option value="Gujarat">Gujarat</option>
+				    <option value="Haryana">Haryana</option>
+				    <option value="'Himachal Pradesh'">Himachal Pradesh</option>
+				    <option value="Jharkhand">Jharkhand</option>
+				    <option value="Karnataka">Karnataka</option>
+				    <option value="Kerala">Kerala</option>
+				    <option value="'Madhya Pradesh'">Madhya Pradesh</option>
+				    <option value="Maharashtra">Maharashtra</option>
+				    <option value="Manipur">Manipur</option>
+				    <option value="Meghalaya">Meghalaya</option>
+				    <option value="Mizoram">Mizoram</option>
+				    <option value="Nagaland">Nagaland</option>
+				    <option value="Odisha">Odisha</option>
+				    <option value="Punjab">Punjab</option>
+				    <option value="Rajasthan">Rajasthan</option>
+				    <option value="Sikkim">Sikkim</option>
+				    <option value="'Tamil Nadu'">Tamil Nadu</option>
+				    <option value="Telangana">Telangana</option>
+				    <option value="Tripura">Tripura</option>
+				    <option value="'Uttar Pradesh'">Uttar Pradesh</option>
+				    <option value="Uttarakhand">Uttarakhand</option>
+				    <option value="'West Bengal'">West Bengal</option>
+				    <option value="'Andaman and Nicobar Islands'">Andaman and Nicobar Islands</option>
+				    <option value="Chandigarh">Chandigarh</option>
+				    <option value="'Dadra and Nagar Haveli and Daman and Diu'">Dadra and Nagar Haveli and Daman and Diu</option>
+				    <option value="Delhi">Delhi</option>
+				    <option value="'Jammu and Kashmir'">Jammu and Kashmir</option>
+				    <option value="Ladakh">Ladakh</option>
+				    <option value="Lakshadweep">Lakshadweep</option>
+				    <option value="Puducherry">Puducherry</option>
+                    </select>
+                    
+                    
+                    <select name="district" id="districtSelect">
+                        <option value="">Select District</option>
+                        
+                        <!-- Andhra Pradesh -->
+                        <option value="Anantapur">Anantapur</option>
+                        <option value="Chittoor">Chittoor</option>
+                        <option value="East Godavari">East Godavari</option>
+                        <option value="Guntur">Guntur</option>
+                        <option value="Kadapa">Kadapa</option>
+                        <option value="Krishna">Krishna</option>
+                        <option value="Kurnool">Kurnool</option>
+                        <option value="Nellore">Nellore</option>
+                        <option value="Srikakulam">Srikakulam</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="West Godavari">West Godavari</option>
+                      
+                        <!-- Arunachal Pradesh -->
+                        <option value="Itanagar">Itanagar</option>
+                        <option value="Tawang">Tawang</option>
+                        <option value="Ziro">Ziro</option>
+                        <option value="Bomdila">Bomdila</option>
+                        <option value="Pasighat">Pasighat</option>
+                        <option value="Roing">Roing</option>
+                        <option value="Tezu">Tezu</option>
+                        <option value="Daporijo">Daporijo</option>
+                        <option value="Aalo">Aalo</option>
+                        <option value="Changlang">Changlang</option>
+                        <option value="Khonsa">Khonsa</option>
+                      
+                        <!-- Assam -->
+                        <option value="Guwahati">Guwahati</option>
+                        <option value="Dibrugarh">Dibrugarh</option>
+                        <option value="Jorhat">Jorhat</option>
+                        <option value="Silchar">Silchar</option>
+                        <option value="Tezpur">Tezpur</option>
+                        <option value="Tinsukia">Tinsukia</option>
+                        <option value="Nagaon">Nagaon</option>
+                        <option value="Barpeta">Barpeta</option>
+                        <option value="Bongaigaon">Bongaigaon</option>
+                        <option value="Karimganj">Karimganj</option>
+                        <option value="Goalpara">Goalpara</option>
+                      
+                        <!-- Bihar -->
+                        <option value="Patna">Patna</option>
+                        <option value="Gaya">Gaya</option>
+                        <option value="Muzaffarpur">Muzaffarpur</option>
+                        <option value="Bhagalpur">Bhagalpur</option>
+                        <option value="Darbhanga">Darbhanga</option>
+                        <option value="Purnia">Purnia</option>
+                        <option value="Nalanda">Nalanda</option>
+                        <option value="Siwan">Siwan</option>
+                        <option value="Chapra">Chapra</option>
+                        <option value="Samastipur">Samastipur</option>
+                        <option value="Arrah">Arrah</option>
+                      
+                        <!-- Chhattisgarh -->
+                        <option value="Raipur">Raipur</option>
+                        <option value="Bilaspur">Bilaspur</option>
+                        <option value="Durg">Durg</option>
+                        <option value="Bhilai">Bhilai</option>
+                        <option value="Korba">Korba</option>
+                        <option value="Rajnandgaon">Rajnandgaon</option>
+                        <option value="Jagdalpur">Jagdalpur</option>
+                        <option value="Ambikapur">Ambikapur</option>
+                        <option value="Raigarh">Raigarh</option>
+                        <option value="Jashpur">Jashpur</option>
+                        <option value="Kanker">Kanker</option>
+                      
+                        <!-- Goa -->
+                        <option value="North Goa">North Goa</option>
+                        <option value="South Goa">South Goa</option>
+                      
+                        <!-- Gujarat -->
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Vadodara">Vadodara</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Bhavnagar">Bhavnagar</option>
+                        <option value="Jamnagar">Jamnagar</option>
+                        <option value="Gandhinagar">Gandhinagar</option>
+                        <option value="Junagadh">Junagadh</option>
+                        <option value="Anand">Anand</option>
+                        <option value="Banaskantha">Banaskantha</option>
+                        <option value="Kutch">Kutch</option>
+                        
+                        </select>
+                      
+                    
+                    
+                    
+                    <input type="text" name="ward" placeholder="Ward Number" >
+                     <input type="password" name="password" th:field="*{password}" placeholder="Password">
+                    <input type="file" name="photo" required>
+                    <button type="submit" class="submit-btn">Submit</button>
+                    
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
